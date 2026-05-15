@@ -8,8 +8,8 @@ export default function Home() {
     {
       title: "Canva Editable Template",
       description: "Professional, easy-to-customize Canva templates for social media, presentations, and marketing materials. Perfect for content creators and businesses.",
-      price: "$9.99",
-      originalPrice: "$29.99",
+      price: "$250",
+      priceNote: "one-time payment",
       image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
       features: [
         { text: "50+ professionally designed templates" },
@@ -23,8 +23,8 @@ export default function Home() {
     {
       title: "Ultimate Creator Mega Pack",
       description: "Everything you need to elevate your content creation. 40,000+ premium assets including Lightroom presets, Canva templates, Instagram Reels templates, and more.",
-      price: "$49.99",
-      originalPrice: "$299.99",
+      price: "$678",
+      priceNote: "per month",
       image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&h=600&fit=crop",
       features: [
         { text: "40,000+ premium digital assets" },
