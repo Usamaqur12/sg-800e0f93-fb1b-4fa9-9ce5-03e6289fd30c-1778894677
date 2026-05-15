@@ -24,35 +24,35 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full">
+    <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-background/80">
       {/* Sliding Announcement Bar */}
-      <div className="bg-primary text-primary-foreground py-2 overflow-hidden">
+      <div className="bg-gradient-primary text-primary-foreground py-2.5 overflow-hidden">
         <div className="flex whitespace-nowrap animate-slide-left">
           <div className="flex items-center gap-8 px-4">
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-2 font-medium">
               <Sparkles className="w-4 h-4" />
               Limited Time: 40% off Creator Mega Pack
             </span>
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-2 font-medium">
               <ShoppingBag className="w-4 h-4" />
               New: 10,000+ Canva Templates Added
             </span>
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-2 font-medium">
               <Star className="w-4 h-4" />
               Join 50,000+ Happy Creators
             </span>
           </div>
           {/* Duplicate for seamless loop */}
           <div className="flex items-center gap-8 px-4">
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-2 font-medium">
               <Sparkles className="w-4 h-4" />
               Limited Time: 40% off Creator Mega Pack
             </span>
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-2 font-medium">
               <ShoppingBag className="w-4 h-4" />
               New: 10,000+ Canva Templates Added
             </span>
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-2 font-medium">
               <Star className="w-4 h-4" />
               Join 50,000+ Happy Creators
             </span>
@@ -61,7 +61,7 @@ export function Header() {
       </div>
 
       {/* Main Navigation */}
-      <nav className="bg-background border-b border-border">
+      <nav className="border-b border-border/50">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -72,7 +72,7 @@ export function Header() {
               {/* Language Selector */}
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="sm" className="gap-2">
+                  <Button variant="ghost" size="sm" className="gap-2 hover:bg-accent/10">
                     <Globe className="w-4 h-4" />
                     <span>{selectedLanguage.flag}</span>
                     <span className="hidden lg:inline">{selectedLanguage.name}</span>
@@ -107,7 +107,7 @@ export function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 text-foreground hover:text-accent"
+              className="md:hidden p-2 text-foreground hover:text-accent transition-colors"
             >
               {mobileMenuOpen ? (
                 <X className="w-6 h-6" />
@@ -119,7 +119,7 @@ export function Header() {
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className="md:hidden py-4 border-t border-border">
+            <div className="md:hidden py-4 border-t border-border/50">
               <div className="flex flex-col space-y-3">
                 {/* Language Selector Mobile */}
                 <DropdownMenu>
