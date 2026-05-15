@@ -350,7 +350,7 @@ export default function Home() {
                       size="lg"
                       variant="accent"
                       className="text-lg px-8 py-6 w-full sm:w-auto"
-                      onClick={() => window.open("https://whop.com/joined/dabel-solutions/products/canva-editable-template/", "_blank")}
+                      onClick={() => window.open("https://whop.com/checkout/plan_uhfcNszlYIPzW", "_blank")}
                     >
                       <Download className="w-5 h-5 mr-2" />
                       Get Instant Access
@@ -359,7 +359,7 @@ export default function Home() {
                       size="lg"
                       variant="outline"
                       className="text-lg px-8 py-6 w-full sm:w-auto border-accent/30 hover:bg-accent/10"
-                      onClick={() => window.open("https://whop.com/joined/dabel-solutions/products/canva-editable-template/", "_blank")}
+                      onClick={() => window.open("https://whop.com/checkout/plan_uhfcNszlYIPzW", "_blank")}
                     >
                       Download Templates
                     </Button>
@@ -560,7 +560,7 @@ export default function Home() {
                       size="lg"
                       variant="accent"
                       className="text-lg px-8 py-6 w-full sm:w-auto"
-                      onClick={() => window.open("https://whop.com/joined/dabel-solutions/products/ultimate-creator-mega-pack-40-000-assets-bundle-lightroom-canva-reels-and-more/", "_blank")}
+                      onClick={() => window.open("https://whop.com/checkout/plan_G4ItRh2UZoiTt", "_blank")}
                     >
                       <Download className="w-5 h-5 mr-2" />
                       Get Instant Access
@@ -569,7 +569,7 @@ export default function Home() {
                       size="lg"
                       variant="outline"
                       className="text-lg px-8 py-6 w-full sm:w-auto border-accent/30 hover:bg-accent/10"
-                      onClick={() => window.open("https://whop.com/joined/dabel-solutions/products/ultimate-creator-mega-pack-40-000-assets-bundle-lightroom-canva-reels-and-more/", "_blank")}
+                      onClick={() => window.open("https://whop.com/checkout/plan_G4ItRh2UZoiTt", "_blank")}
                     >
                       Download Bundle
                     </Button>

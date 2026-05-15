@@ -96,7 +96,7 @@ export function Header() {
               <Button
                 variant="accent"
                 size="sm"
-                onClick={() => window.open("https://whop.com/joined/dabel-solutions/", "_blank")}
+                onClick={() => window.open("https://whop.com/login/", "_blank")}
                 className="gap-2"
               >
                 <LogIn className="w-4 h-4" />
@@ -152,7 +152,7 @@ export function Header() {
                   variant="accent"
                   size="sm"
                   onClick={() => {
-                    window.open("https://whop.com/joined/dabel-solutions/", "_blank");
+                    window.open("https://whop.com/login/", "_blank");
                     setMobileMenuOpen(false);
                   }}
                   className="w-full gap-2"
