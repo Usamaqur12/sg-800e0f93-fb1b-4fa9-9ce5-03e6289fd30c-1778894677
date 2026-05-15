@@ -27,7 +27,12 @@ import {
   Target,
   Lightbulb,
   Mail,
-  MessageSquare
+  MessageSquare,
+  Award,
+  Package,
+  Film,
+  Image,
+  Briefcase
 } from "lucide-react";
 
 export default function Home() {
@@ -165,118 +170,390 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Featured Products */}
-        <section className="container py-16 md:py-24">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-4">
-                Featured Products
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Choose the perfect package for your content creation needs
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Canva Template Product */}
-              <div className="bg-card border border-border rounded-xl overflow-hidden hover:border-accent/50 transition-all duration-300 group">
-                <div className="aspect-video bg-gradient-to-br from-secondary to-card overflow-hidden">
-                  <img 
-                    src="/canva-template.png" 
-                    alt="Canva Editable Template"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+        {/* Detailed Product Sections */}
+        <section className="container py-20">
+          {/* Canva Template Product */}
+          <div className="max-w-6xl mx-auto mb-32">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Product Image */}
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-primary opacity-20 blur-3xl group-hover:opacity-30 transition-opacity duration-500" />
+                <div className="relative glass-effect rounded-2xl p-8 border border-border/50">
+                  <img
+                    src="/canva-template.png"
+                    alt="10,000+ Canva Templates"
+                    className="w-full h-auto rounded-xl shadow-2xl transform group-hover:scale-105 transition-transform duration-500"
                   />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-serif text-2xl font-bold text-foreground mb-3">
-                    Canva Editable Template
-                  </h3>
-                  <p className="text-muted-foreground mb-6">
-                    Professional, easy-to-customize templates for social media, presentations, and marketing materials.
-                  </p>
-                  
-                  <ul className="space-y-3 mb-6">
-                    {[
-                      "50+ professionally designed templates",
-                      "Fully customizable in Canva",
-                      "Commercial use license included",
-                      "Instagram, Facebook, LinkedIn formats",
-                      "Lifetime access and updates"
-                    ].map((feature, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-foreground">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <div className="flex items-baseline gap-2 mb-6">
-                    <span className="text-4xl font-bold text-foreground">$250</span>
-                    <span className="text-muted-foreground">one-time payment</span>
-                  </div>
-                  
-                  <Button 
-                    className="w-full" 
-                    size="lg"
-                    variant="accent"
-                    onClick={() => window.open("https://whop.com/joined/dabel-solutions/products/canva-editable-template/", "_blank")}
-                  >
-                    Purchase Now
-                  </Button>
                 </div>
               </div>
 
-              {/* Creator Mega Pack Product */}
-              <div className="bg-card border-2 border-accent rounded-xl overflow-hidden hover:border-accent/80 transition-all duration-300 group relative">
-                <div className="absolute top-4 right-4 z-10">
-                  <Badge className="bg-accent text-accent-foreground font-semibold">
-                    MOST POPULAR
-                  </Badge>
+              {/* Product Details */}
+              <div className="space-y-6">
+                <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-semibold">
+                  <Sparkles className="w-4 h-4" />
+                  10,000+ Templates
                 </div>
-                <div className="aspect-video bg-gradient-to-br from-accent/20 to-card overflow-hidden">
-                  <img 
-                    src="/creator-mega-pack.png" 
-                    alt="Ultimate Creator Mega Pack"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+
+                <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground">
+                  Canva Editable Template Bundle
+                </h2>
+
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Get access to a massive collection of 10,000 fully editable Canva templates designed to make your work faster, easier, and more professional. Perfect for businesses, marketers, content creators, and designers who want high-quality designs without spending hours creating them from scratch.
+                </p>
+
+                <p className="text-muted-foreground leading-relaxed">
+                  This bundle includes a wide variety of templates such as social media posts, Instagram posts, stories, business flyers, banners, ads, presentations, marketing graphics, and more. Every template is 100% customizable in Canva.
+                </p>
+
+                <p className="text-muted-foreground leading-relaxed">
+                  No advanced design skills are required. Simply open the template in Canva, edit it in minutes, and download it for your projects.
+                </p>
+
+                {/* Feature Grid */}
+                <div className="grid sm:grid-cols-2 gap-4 pt-4">
+                  <div className="flex items-start gap-3 p-4 rounded-lg bg-card/50 hover:bg-card transition-colors">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <Sparkles className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">10,000+ Templates</p>
+                      <p className="text-sm text-muted-foreground">Professional designs</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 rounded-lg bg-card/50 hover:bg-card transition-colors">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <Zap className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Fully Editable</p>
+                      <p className="text-sm text-muted-foreground">Customize everything</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 rounded-lg bg-card/50 hover:bg-card transition-colors">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <Palette className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Drag & Drop</p>
+                      <p className="text-sm text-muted-foreground">Easy editing</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 rounded-lg bg-card/50 hover:bg-card transition-colors">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <TrendingUp className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Social Media Ready</p>
+                      <p className="text-sm text-muted-foreground">Perfect formats</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 rounded-lg bg-card/50 hover:bg-card transition-colors">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <Award className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">High Quality</p>
+                      <p className="text-sm text-muted-foreground">Modern designs</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 rounded-lg bg-card/50 hover:bg-card transition-colors">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <Users className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Free Canva Account</p>
+                      <p className="text-sm text-muted-foreground">No premium needed</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 rounded-lg bg-card/50 hover:bg-card transition-colors">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <Clock className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Save Time</p>
+                      <p className="text-sm text-muted-foreground">Create instantly</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="font-serif text-2xl font-bold text-foreground mb-3">
-                    Ultimate Creator Mega Pack
-                  </h3>
-                  <p className="text-muted-foreground mb-6">
-                    Everything you need to elevate your content. 40,000+ premium assets including Lightroom presets, Canva templates, Reels templates, and more.
-                  </p>
-                  
-                  <ul className="space-y-3 mb-6">
-                    {[
-                      "40,000+ premium digital assets",
-                      "Professional Lightroom presets",
-                      "Instagram Reels and Stories templates",
-                      "Canva templates for all platforms",
-                      "Video editing assets and transitions",
-                      "Commercial license for client work"
-                    ].map((feature, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-foreground">{feature}</span>
-                      </li>
-                    ))}
+
+                {/* Price & CTA */}
+                <div className="pt-6">
+                  <div className="flex items-baseline gap-3 mb-6">
+                    <span className="text-4xl font-bold text-foreground">$250</span>
+                    <span className="text-muted-foreground">one-time payment</span>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button
+                      size="lg"
+                      variant="accent"
+                      className="text-lg px-8 py-6 w-full sm:w-auto"
+                      onClick={() => window.open("https://whop.com/joined/dabel-solutions/products/canva-editable-template/", "_blank")}
+                    >
+                      <Download className="w-5 h-5 mr-2" />
+                      Get Instant Access
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="text-lg px-8 py-6 w-full sm:w-auto border-accent/30 hover:bg-accent/10"
+                      onClick={() => window.open("https://whop.com/joined/dabel-solutions/products/canva-editable-template/", "_blank")}
+                    >
+                      Download Templates
+                    </Button>
+                  </div>
+
+                  {/* Trust Badges */}
+                  <div className="flex flex-wrap gap-4 mt-6">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-2 h-2 rounded-full bg-green-500" />
+                      Instant Digital Delivery
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-2 h-2 rounded-full bg-green-500" />
+                      Lifetime Access
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-2 h-2 rounded-full bg-green-500" />
+                      Beginner Friendly
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Ultimate Creator Mega Pack Product */}
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Product Details */}
+              <div className="space-y-6 lg:order-1">
+                <div className="inline-flex items-center gap-2 bg-gradient-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
+                  <Star className="w-4 h-4" />
+                  MOST POPULAR
+                </div>
+
+                <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground">
+                  Ultimate Creator Mega Pack
+                </h2>
+                <p className="text-xl text-accent font-semibold">
+                  40,000+ Assets Bundle
+                </p>
+
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Unlock the ultimate all-in-one creator bundle packed with over 40,000+ premium digital assets designed for content creators, video editors, designers, marketers, and social media brands.
+                </p>
+
+                <p className="text-muted-foreground leading-relaxed">
+                  This mega bundle includes everything you need to create professional content faster and easier — without spending hundreds of dollars on separate tools and resources.
+                </p>
+
+                {/* What's Inside */}
+                <div className="space-y-3 pt-4">
+                  <p className="font-semibold text-foreground text-lg">Inside the bundle:</p>
+                  <ul className="grid sm:grid-cols-2 gap-2 text-muted-foreground">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
+                      Lightroom Presets
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
+                      Canva Templates
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
+                      Viral Reels Templates
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
+                      Video Editing Assets
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
+                      Social Media Graphics
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
+                      Motion Elements
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
+                      Fonts & Design Resources
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
+                      Marketing Templates
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
+                      Business Content Assets
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
+                      And much more
+                    </li>
                   </ul>
-                  
-                  <div className="flex items-baseline gap-2 mb-6">
+                </div>
+
+                <p className="text-muted-foreground leading-relaxed">
+                  All assets are professionally designed and beginner friendly. Simply download, customize, and start creating high-quality content for Instagram, TikTok, YouTube, client projects, and online businesses.
+                </p>
+
+                {/* Feature Grid */}
+                <div className="grid sm:grid-cols-2 gap-4 pt-4">
+                  <div className="flex items-start gap-3 p-4 rounded-lg glass-effect hover:bg-card/50 transition-colors">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <Package className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">40,000+ Assets</p>
+                      <p className="text-sm text-muted-foreground">Complete bundle</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 rounded-lg glass-effect hover:bg-card/50 transition-colors">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <Zap className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Instant Access</p>
+                      <p className="text-sm text-muted-foreground">Download now</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 rounded-lg glass-effect hover:bg-card/50 transition-colors">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <Film className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Viral Reels</p>
+                      <p className="text-sm text-muted-foreground">Social content</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 rounded-lg glass-effect hover:bg-card/50 transition-colors">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <Image className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Lightroom Presets</p>
+                      <p className="text-sm text-muted-foreground">Pro editing</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 rounded-lg glass-effect hover:bg-card/50 transition-colors">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <Users className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Beginner Friendly</p>
+                      <p className="text-sm text-muted-foreground">Easy to use</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 rounded-lg glass-effect hover:bg-card/50 transition-colors">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <Briefcase className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">For Business</p>
+                      <p className="text-sm text-muted-foreground">Client work ready</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 rounded-lg glass-effect hover:bg-card/50 transition-colors">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <Clock className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Save Hours</p>
+                      <p className="text-sm text-muted-foreground">Work faster</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 rounded-lg glass-effect hover:bg-card/50 transition-colors">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <Award className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">High Quality</p>
+                      <p className="text-sm text-muted-foreground">Professional resources</p>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-muted-foreground italic pt-4">
+                  Whether you are a content creator, freelancer, agency owner, marketer, or entrepreneur, this bundle gives you a complete creator toolkit to level up your content and branding. 🚀
+                </p>
+
+                {/* Price & CTA */}
+                <div className="pt-6">
+                  <div className="flex items-baseline gap-3 mb-6">
                     <span className="text-4xl font-bold text-foreground">$678</span>
                     <span className="text-muted-foreground">per month</span>
                   </div>
-                  
-                  <Button 
-                    className="w-full" 
-                    size="lg"
-                    variant="accent"
-                    onClick={() => window.open("https://whop.com/joined/dabel-solutions/products/ultimate-creator-mega-pack-40-000-assets-bundle-lightroom-canva-reels-and-more/", "_blank")}
-                  >
-                    Purchase Now
-                  </Button>
+
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button
+                      size="lg"
+                      variant="accent"
+                      className="text-lg px-8 py-6 w-full sm:w-auto"
+                      onClick={() => window.open("https://whop.com/joined/dabel-solutions/products/ultimate-creator-mega-pack-40-000-assets-bundle-lightroom-canva-reels-and-more/", "_blank")}
+                    >
+                      <Download className="w-5 h-5 mr-2" />
+                      Get Instant Access
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="text-lg px-8 py-6 w-full sm:w-auto border-accent/30 hover:bg-accent/10"
+                      onClick={() => window.open("https://whop.com/joined/dabel-solutions/products/ultimate-creator-mega-pack-40-000-assets-bundle-lightroom-canva-reels-and-more/", "_blank")}
+                    >
+                      Download Bundle
+                    </Button>
+                  </div>
+
+                  {/* Trust Badges */}
+                  <div className="flex flex-wrap gap-4 mt-6">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-2 h-2 rounded-full bg-green-500" />
+                      Instant Digital Delivery
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-2 h-2 rounded-full bg-green-500" />
+                      Lifetime Access
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-2 h-2 rounded-full bg-green-500" />
+                      Beginner Friendly
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-2 h-2 rounded-full bg-green-500" />
+                      Secure Checkout
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Product Image */}
+              <div className="relative group lg:order-2">
+                <div className="absolute inset-0 bg-gradient-primary opacity-20 blur-3xl group-hover:opacity-30 transition-opacity duration-500" />
+                <div className="relative glass-effect rounded-2xl p-8 border border-border/50">
+                  <img
+                    src="/creator-mega-pack.png"
+                    alt="Ultimate Creator Mega Pack"
+                    className="w-full h-auto rounded-xl shadow-2xl transform group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 right-4 bg-gradient-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                    40,000+ Assets
+                  </div>
                 </div>
               </div>
             </div>
