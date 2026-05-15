@@ -10,6 +10,7 @@ interface ProductCardProps {
   title: string;
   description: string;
   price: string;
+  priceNote?: string;
   originalPrice?: string;
   image: string;
   features: ProductFeature[];
@@ -20,6 +21,7 @@ export function ProductCard({
   title,
   description,
   price,
+  priceNote,
   originalPrice,
   image,
   features,
@@ -50,6 +52,11 @@ export function ProductCard({
             <span className="font-serif text-3xl font-bold text-foreground">
               {price}
             </span>
+            {priceNote && (
+              <span className="text-sm text-muted-foreground font-medium">
+                {priceNote}
+              </span>
+            )}
             {originalPrice && (
               <span className="text-lg text-muted-foreground line-through">
                 {originalPrice}
