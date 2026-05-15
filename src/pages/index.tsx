@@ -25,7 +25,7 @@ export default function Home() {
       description: "Everything you need to elevate your content creation. 40,000+ premium assets including Lightroom presets, Canva templates, Instagram Reels templates, and more.",
       price: "$678",
       priceNote: "per month",
-      image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&h=600&fit=crop",
+      image: "/creator-mega-pack.png",
       features: [
         { text: "40,000+ premium digital assets" },
         { text: "Professional Lightroom presets" },
