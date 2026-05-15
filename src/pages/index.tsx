@@ -36,11 +36,44 @@ import {
 } from "lucide-react";
 
 export default function Home() {
+  const products = [
+    {
+      icon: Brain,
+      title: "AI Prompt Packs",
+      description: "Battle-tested prompts for ChatGPT, Claude, and Midjourney to create engaging content instantly"
+    },
+    {
+      icon: Video,
+      title: "Viral Reels Templates",
+      description: "Proven Instagram Reels and TikTok templates that drive engagement and views"
+    },
+    {
+      icon: Palette,
+      title: "Canva Templates",
+      description: "Professional designs for social media, presentations, and marketing materials"
+    },
+    {
+      icon: Target,
+      title: "Content Hook Packs",
+      description: "Scroll-stopping hooks and captions that capture attention and drive engagement"
+    },
+    {
+      icon: Lightbulb,
+      title: "AI Automation Resources",
+      description: "Workflows and systems to automate your content creation process"
+    },
+    {
+      icon: Instagram,
+      title: "Social Media Systems",
+      description: "Complete content calendars and posting strategies for consistent growth"
+    }
+  ];
+
   return (
     <>
       <SEO
-        title="DABEL AI - Premium AI Digital Products for Content Creators"
-        description="AI prompts, viral reels templates, Canva designs, and content creation tools. Instant access to 40,000+ premium assets for creators and marketers."
+        title="DABEL AI - Premium AI Creator Assets"
+        description="Instant access to AI prompts, Canva templates, viral reels assets, and creator resources designed for creators, marketers, and businesses."
         image="/og-image.png"
       />
       
@@ -48,62 +81,80 @@ export default function Home() {
 
       <div className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="container py-16 md:py-24">
-          <div className="max-w-5xl mx-auto text-center">
-            <Badge className="mb-6 bg-accent/10 text-accent hover:bg-accent/20 border-accent/20">
-              <Sparkles className="w-3.5 h-3.5 mr-1.5" />
-              40,000+ Premium Digital Assets
-            </Badge>
-            
-            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-              Create Viral Content with{" "}
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                AI-Powered Tools
-              </span>
-            </h1>
-            
-            <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-3xl mx-auto">
-              Professional AI prompts, viral reels templates, Canva designs, and content systems. 
-              Everything you need to create engaging content that stands out.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button 
-                size="lg" 
-                variant="accent"
-                className="text-lg px-8 py-6 h-auto"
-                onClick={() => window.open("https://whop.com/joined/dabel-solutions/", "_blank")}
-              >
-                <Download className="w-5 h-5 mr-2" />
-                Get Instant Access
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="text-lg px-8 py-6 h-auto border-border hover:border-accent"
-                onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                View Products
-              </Button>
-            </div>
-
-            {/* Trust Badges */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
-              <div className="flex items-center justify-center gap-3 glass-effect rounded-lg p-4">
-                <Zap className="w-5 h-5 text-accent flex-shrink-0" />
-                <span className="text-sm font-medium text-foreground">Instant Digital Delivery</span>
+        <section className="relative overflow-hidden">
+          {/* Background Gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-card/50" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-accent/10 via-transparent to-transparent" />
+          
+          <div className="container relative py-24 md:py-32 lg:py-40">
+            <div className="max-w-4xl mx-auto text-center">
+              {/* Premium Badge */}
+              <div className="inline-flex items-center gap-2 glass-effect px-5 py-2.5 rounded-full text-sm font-semibold mb-8 border border-accent/20 hover:border-accent/40 transition-colors animate-fade-in">
+                <Sparkles className="w-4 h-4 text-accent" />
+                <span className="bg-gradient-primary bg-clip-text text-transparent">
+                  Premium Digital Creator Assets
+                </span>
               </div>
-              <div className="flex items-center justify-center gap-3 glass-effect rounded-lg p-4">
-                <Shield className="w-5 h-5 text-accent flex-shrink-0" />
-                <span className="text-sm font-medium text-foreground">Secure Payments</span>
+              
+              {/* Main Headline */}
+              <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight tracking-tight animate-fade-in-up">
+                Premium AI Creator Assets for{" "}
+                <span className="bg-gradient-primary bg-clip-text text-transparent">
+                  Modern Content Creators
+                </span>
+              </h1>
+              
+              {/* Subheadline */}
+              <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+                Instant access to AI prompts, Canva templates, viral reels assets, and creator resources designed for creators, marketers, and businesses.
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+                <Button
+                  size="lg"
+                  variant="accent"
+                  className="text-lg px-8 py-6 shadow-lg shadow-accent/20 hover:shadow-accent/30 transition-all group"
+                  onClick={() => window.scrollTo({ top: document.getElementById("products")?.offsetTop || 0, behavior: "smooth" })}
+                >
+                  <Download className="w-5 h-5 mr-2 group-hover:animate-pulse" />
+                  Get Instant Access
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="text-lg px-8 py-6 border-accent/30 hover:bg-accent/10 hover:border-accent/50 transition-all"
+                  onClick={() => window.scrollTo({ top: document.getElementById("products")?.offsetTop || 0, behavior: "smooth" })}
+                >
+                  <ShoppingBag className="w-5 h-5 mr-2" />
+                  Explore Products
+                </Button>
               </div>
-              <div className="flex items-center justify-center gap-3 glass-effect rounded-lg p-4">
-                <Clock className="w-5 h-5 text-accent flex-shrink-0" />
-                <span className="text-sm font-medium text-foreground">Lifetime Access</span>
+
+              {/* Trust Badges */}
+              <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+                <div className="flex items-center gap-2 group cursor-default">
+                  <div className="w-2 h-2 rounded-full bg-green-500 group-hover:animate-pulse-glow" />
+                  <span className="group-hover:text-foreground transition-colors">Instant Digital Delivery</span>
+                </div>
+                <div className="flex items-center gap-2 group cursor-default">
+                  <div className="w-2 h-2 rounded-full bg-green-500 group-hover:animate-pulse-glow" />
+                  <span className="group-hover:text-foreground transition-colors">Lifetime Access</span>
+                </div>
+                <div className="flex items-center gap-2 group cursor-default">
+                  <div className="w-2 h-2 rounded-full bg-green-500 group-hover:animate-pulse-glow" />
+                  <span className="group-hover:text-foreground transition-colors">Beginner Friendly</span>
+                </div>
+                <div className="flex items-center gap-2 group cursor-default">
+                  <div className="w-2 h-2 rounded-full bg-green-500 group-hover:animate-pulse-glow" />
+                  <span className="group-hover:text-foreground transition-colors">Secure Checkout</span>
+                </div>
               </div>
             </div>
           </div>
+
+          {/* Bottom Fade */}
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
         </section>
 
         {/* What You Get Section */}
