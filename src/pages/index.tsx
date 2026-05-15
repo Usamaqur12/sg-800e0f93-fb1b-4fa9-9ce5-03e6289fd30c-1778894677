@@ -1,5 +1,6 @@
 import { SEO } from "@/components/SEO";
 import { Header } from "@/components/Header";
+import { Logo } from "@/components/Logo";
 import { Button } from "@/components/ui/themed-button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
