@@ -1,6 +1,7 @@
 import { SEO } from "@/components/SEO";
 import { ProductCard } from "@/components/ProductCard";
 import { Button } from "@/components/ui/themed-button";
+import Link from "next/link";
 import {
   Accordion,
   AccordionContent,
@@ -169,19 +170,43 @@ export default function Home() {
         {/* Footer */}
         <footer className="border-t border-border mt-20">
           <div className="container py-12">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div>
                 <h3 className="font-serif text-2xl font-bold text-foreground mb-2">
                   DABEL Solutions
                 </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground mb-4">
                   Premium digital assets for creative professionals
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Contact: <a href="mailto:support@dabel.ai" className="text-accent hover:underline">support@dabel.ai</a>
                 </p>
               </div>
               
-              <div className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} DABEL Solutions. All rights reserved.
+              <div>
+                <h4 className="font-semibold text-foreground mb-4">Legal</h4>
+                <ul className="space-y-2 text-sm">
+                  <li>
+                    <Link href="/terms-of-service" className="text-muted-foreground hover:text-accent transition-colors">
+                      Terms of Service
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/privacy-policy" className="text-muted-foreground hover:text-accent transition-colors">
+                      Privacy Policy
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/refund-policy" className="text-muted-foreground hover:text-accent transition-colors">
+                      Refund Policy
+                    </Link>
+                  </li>
+                </ul>
               </div>
+            </div>
+            
+            <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
+              © {new Date().getFullYear()} DABEL Solutions. All rights reserved.
             </div>
           </div>
         </footer>
