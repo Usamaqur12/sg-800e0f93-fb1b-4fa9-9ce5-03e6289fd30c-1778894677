@@ -14,8 +14,8 @@ Set up complete design system with custom palette, typography, and shadcn themin
 
 ## Checklist
 - [x] Create project brief with design direction
-- [ ] Configure custom color tokens in globals.css
-- [ ] Register fonts in tailwind.config.ts
+- [x] Configure custom color tokens in globals.css
+- [x] Register fonts in tailwind.config.ts
 - [ ] Theme shadcn button and badge components
 
 ## Acceptance
