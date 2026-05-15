@@ -1,6 +1,12 @@
 import { SEO } from "@/components/SEO";
 import { ProductCard } from "@/components/ProductCard";
 import { Button } from "@/components/ui/themed-button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Sparkles, ShoppingBag, Star } from "lucide-react";
 
 export default function Home() {
@@ -114,6 +120,49 @@ export default function Home() {
                 <p className="text-sm text-muted-foreground">Content Creator & Designer</p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="container py-16">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Everything you need to know about our products and services
+              </p>
+            </div>
+
+            <Accordion type="single" collapsible className="space-y-4">
+              <AccordionItem value="item-1" className="bg-card border border-border rounded-lg px-6">
+                <AccordionTrigger className="font-semibold text-foreground hover:text-accent hover:no-underline">
+                  Why its so cheap?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  By pooling resources and offering shared access to our suite of tools, we can significantly reduce costs. This shared model allows us to take advantage of economies of scale, ensuring that you receive a cost-effective subscription while still enjoying a seamless experience across all our services.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2" className="bg-card border border-border rounded-lg px-6">
+                <AccordionTrigger className="font-semibold text-foreground hover:text-accent hover:no-underline">
+                  Can I get a refund after gaining access?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  All sales are final. Upon payment, you receive immediate access to exclusive content and resources. For this reason, we do not offer refunds.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3" className="bg-card border border-border rounded-lg px-6">
+                <AccordionTrigger className="font-semibold text-foreground hover:text-accent hover:no-underline">
+                  How can i cancel my subscription?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  You can cancel any time, just open support ticket on discord or email us at support@dabel.ai or login and manage subscription cancellation yourself before the next renewal.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </section>
 
