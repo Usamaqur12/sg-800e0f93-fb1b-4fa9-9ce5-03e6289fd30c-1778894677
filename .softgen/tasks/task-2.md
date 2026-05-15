@@ -1,0 +1,26 @@
+---
+title: Homepage with Product Showcase
+status: todo
+priority: high
+type: feature
+tags: [homepage, products]
+created_by: agent
+created_at: 2026-05-15T14:04:23Z
+position: 2
+---
+
+## Notes
+Build homepage featuring hero section, two premium digital products (Canva Template + Creator Mega Pack), testimonial section, and footer.
+
+## Checklist
+- [ ] Create hero section with brand introduction
+- [ ] Build ProductCard component with pricing, features, CTA
+- [ ] Add two products with fetched details and images
+- [ ] Include customer testimonial
+- [ ] Create footer with brand info
+
+## Acceptance
+- Both products display with complete information from Whop pages
+- Product images load from external URLs
+- Layout is responsive and matches premium aesthetic
+- All CTAs are functional
