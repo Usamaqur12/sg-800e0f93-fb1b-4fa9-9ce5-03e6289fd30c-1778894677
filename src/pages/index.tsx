@@ -1,4 +1,5 @@
 import { SEO } from "@/components/SEO";
+import { Header } from "@/components/Header";
 import { ProductCard } from "@/components/ProductCard";
 import { Button } from "@/components/ui/themed-button";
 import Link from "next/link";
@@ -48,10 +49,12 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="DABEL Solutions - Premium Digital Assets for Creators"
-        description="Professional design templates, creator tools, and premium digital assets. Elevate your content with our curated collection."
+        title="DABEL Solutions - Premium Digital Products"
+        description="Professional Canva templates and creator resources. 40,000+ premium assets for content creators and designers."
         image="/og-image.png"
       />
+      
+      <Header />
 
       <div className="min-h-screen bg-background">
         {/* Hero Section */}
