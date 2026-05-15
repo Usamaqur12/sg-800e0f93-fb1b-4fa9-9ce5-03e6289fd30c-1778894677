@@ -166,7 +166,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div>
                 <h3 className="font-serif text-2xl font-bold text-foreground mb-2">
-                  dabel ai
+                  DABEL Solutions
                 </h3>
                 <p className="text-sm text-muted-foreground mb-4">
                   Premium digital assets for creative professionals
@@ -199,7 +199,7 @@ export default function Home() {
             </div>
             
             <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-              © {new Date().getFullYear()} dabel ai. All rights reserved.
+              © {new Date().getFullYear()} DABEL AI. All rights reserved.
             </div>
           </div>
         </footer>

@@ -4,9 +4,9 @@ export function Logo() {
   return (
     <Link href="/" className="flex items-center group">
       <svg
-        width="140"
+        width="180"
         height="40"
-        viewBox="0 0 140 40"
+        viewBox="0 0 180 40"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="transition-opacity hover:opacity-80"
@@ -16,7 +16,7 @@ export function Logo() {
           x="0"
           y="28"
           fontFamily="IBM Plex Sans, sans-serif"
-          fontSize="24"
+          fontSize="20"
           fontWeight="600"
           fill="hsl(210, 45%, 15%)"
           letterSpacing="0.5"
@@ -24,22 +24,22 @@ export function Logo() {
           DABEL
         </text>
         
-        {/* AI in amber */}
+        {/* Solutions in amber */}
         <text
-          x="85"
+          x="72"
           y="28"
           fontFamily="IBM Plex Sans, sans-serif"
-          fontSize="24"
+          fontSize="20"
           fontWeight="600"
           fill="hsl(30, 78%, 48%)"
           letterSpacing="0.5"
         >
-          AI
+          Solutions
         </text>
         
         {/* Accent dot */}
         <circle
-          cx="133"
+          cx="173"
           cy="25"
           r="3"
           fill="hsl(30, 78%, 48%)"
