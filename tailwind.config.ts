@@ -15,6 +15,12 @@ const config: Config = {
         serif: ["Newsreader", "Georgia", "serif"],
         mono: ["IBM Plex Mono", "Courier New", "monospace"],
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-primary': 'linear-gradient(135deg, #D4831F 0%, #F5A623 100%)',
+        'gradient-dark': 'linear-gradient(135deg, rgba(26, 35, 50, 0.9) 0%, rgba(15, 23, 42, 0.9) 100%)',
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -56,16 +62,6 @@ const config: Config = {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -89,10 +85,41 @@ const config: Config = {
             height: "0",
           },
         },
+        "fade-in": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(10px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+        "slide-in-left": {
+          "0%": {
+            transform: "translateX(-100%)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateX(0)",
+            opacity: "1",
+          },
+        },
+        "pulse-glow": {
+          "0%, 100%": {
+            opacity: "1",
+          },
+          "50%": {
+            opacity: "0.5",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.5s ease-out",
+        "slide-in-left": "slide-in-left 0.5s ease-out",
+        "pulse-glow": "pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
     },
   },
