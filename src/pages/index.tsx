@@ -10,7 +10,7 @@ export default function Home() {
       description: "Professional, easy-to-customize Canva templates for social media, presentations, and marketing materials. Perfect for content creators and businesses.",
       price: "$250",
       priceNote: "one-time payment",
-      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
+      image: "/canva-template.png",
       features: [
         { text: "50+ professionally designed templates" },
         { text: "Fully customizable in Canva" },
