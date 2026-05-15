@@ -11,14 +11,14 @@ export function Logo() {
         xmlns="http://www.w3.org/2000/svg"
         className="transition-opacity hover:opacity-80"
       >
-        {/* DABEL in navy */}
+        {/* DABEL in white */}
         <text
           x="0"
           y="28"
           fontFamily="IBM Plex Sans, sans-serif"
           fontSize="20"
           fontWeight="600"
-          fill="hsl(210, 45%, 15%)"
+          fill="hsl(40, 56%, 98%)"
           letterSpacing="0.5"
         >
           DABEL
