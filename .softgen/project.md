@@ -1,4 +1,4 @@
-# DABEL Solutions - Digital Product Marketplace
+# dabel ai - Digital Product Marketplace
 
 ## Vision
 Premium digital product marketplace selling design assets, templates, and creator tools. Target audience: content creators, designers, marketers, and freelancers seeking professional-quality resources.

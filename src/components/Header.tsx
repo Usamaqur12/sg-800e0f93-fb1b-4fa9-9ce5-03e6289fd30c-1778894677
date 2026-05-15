@@ -7,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Globe, LogIn, Menu, X } from "lucide-react";
+import { Globe, LogIn, Menu, X, Sparkles, ShoppingBag, Star } from "lucide-react";
 
 const languages = [
   { code: "en", name: "English", flag: "🇬🇧" },
@@ -24,32 +24,49 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full">
-      {/* Announcement Bar */}
-      <div className="bg-primary text-primary-foreground overflow-hidden">
-        <div className="animate-slide-left whitespace-nowrap py-2">
-          <span className="inline-block px-4">
-            🎉 Limited Time Offer: Get 20% off on all products! Use code: SAVE20
-          </span>
-          <span className="inline-block px-4">
-            ⚡ New: Ultimate Creator Mega Pack now available with 40,000+ assets!
-          </span>
-          <span className="inline-block px-4">
-            🎉 Limited Time Offer: Get 20% off on all products! Use code: SAVE20
-          </span>
-          <span className="inline-block px-4">
-            ⚡ New: Ultimate Creator Mega Pack now available with 40,000+ assets!
-          </span>
+      {/* Sliding Announcement Bar */}
+      <div className="bg-primary text-primary-foreground py-2 overflow-hidden">
+        <div className="flex whitespace-nowrap animate-slide-left">
+          <div className="flex items-center gap-8 px-4">
+            <span className="flex items-center gap-2">
+              <Sparkles className="w-4 h-4" />
+              Limited Time: 40% off Creator Mega Pack
+            </span>
+            <span className="flex items-center gap-2">
+              <ShoppingBag className="w-4 h-4" />
+              New: 10,000+ Canva Templates Added
+            </span>
+            <span className="flex items-center gap-2">
+              <Star className="w-4 h-4" />
+              Join 50,000+ Happy Creators
+            </span>
+          </div>
+          {/* Duplicate for seamless loop */}
+          <div className="flex items-center gap-8 px-4">
+            <span className="flex items-center gap-2">
+              <Sparkles className="w-4 h-4" />
+              Limited Time: 40% off Creator Mega Pack
+            </span>
+            <span className="flex items-center gap-2">
+              <ShoppingBag className="w-4 h-4" />
+              New: 10,000+ Canva Templates Added
+            </span>
+            <span className="flex items-center gap-2">
+              <Star className="w-4 h-4" />
+              Join 50,000+ Happy Creators
+            </span>
+          </div>
         </div>
       </div>
 
       {/* Main Navigation */}
-      <nav className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border">
+      <nav className="bg-background border-b border-border">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2">
-              <span className="font-serif text-xl md:text-2xl font-bold text-foreground">
-                DABEL Solutions
+            <Link href="/" className="flex items-center">
+              <span className="font-serif text-2xl font-bold text-foreground">
+                dabel ai
               </span>
             </Link>
 

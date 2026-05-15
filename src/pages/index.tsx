@@ -49,7 +49,7 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="DABEL Solutions - Premium Digital Products"
+        title="dabel ai - Premium Digital Products"
         description="Professional Canva templates and creator resources. 40,000+ premium assets for content creators and designers."
         image="/og-image.png"
       />
@@ -60,18 +60,18 @@ export default function Home() {
         {/* Hero Section */}
         <section className="container py-20 md:py-28">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4" />
-              <span>Premium Digital Resources</span>
+              Premium Digital Assets for Creators
             </div>
             
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
               Elevate Your Creative Work
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-2xl mx-auto">
-              Professional-grade templates, presets, and assets designed for content creators, 
-              designers, and marketers who demand excellence.
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
+              Professional templates, presets, and assets designed for content creators, 
+              designers, and digital entrepreneurs who demand excellence.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -176,7 +176,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div>
                 <h3 className="font-serif text-2xl font-bold text-foreground mb-2">
-                  DABEL Solutions
+                  dabel ai
                 </h3>
                 <p className="text-sm text-muted-foreground mb-4">
                   Premium digital assets for creative professionals
@@ -209,7 +209,7 @@ export default function Home() {
             </div>
             
             <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-              © {new Date().getFullYear()} DABEL Solutions. All rights reserved.
+              © {new Date().getFullYear()} dabel ai. All rights reserved.
             </div>
           </div>
         </footer>
