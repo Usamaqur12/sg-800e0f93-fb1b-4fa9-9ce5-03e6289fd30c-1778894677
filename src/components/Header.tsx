@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import { Logo } from "@/components/Logo";
 import { Button } from "@/components/ui/themed-button";
 import {
   DropdownMenu,
@@ -7,7 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Globe, LogIn, Menu, X, Sparkles, ShoppingBag, Star } from "lucide-react";
+import { Globe, Menu, X, LogIn, Sparkles, ShoppingBag, Star } from "lucide-react";
 
 const languages = [
   { code: "en", name: "English", flag: "🇬🇧" },
@@ -64,11 +65,7 @@ export function Header() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link href="/" className="flex items-center">
-              <span className="font-serif text-2xl font-bold text-foreground">
-                dabel ai
-              </span>
-            </Link>
+            <Logo />
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-4">
