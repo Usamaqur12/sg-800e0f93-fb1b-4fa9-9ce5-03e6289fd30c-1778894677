@@ -73,20 +73,10 @@ export default function Home() {
               Professional templates, presets, and assets designed for content creators, 
               designers, and digital entrepreneurs who demand excellence.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="accent" size="lg" className="group">
-                <ShoppingBag className="w-5 h-5" />
-                Browse Products
-              </Button>
-              <Button variant="outline" size="lg">
-                Learn More
-              </Button>
-            </div>
           </div>
         </section>
 
-        {/* Products Section */}
+        {/* Products Grid */}
         <section className="container py-16">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">

@@ -6,134 +6,127 @@ export default function PrivacyPolicy() {
   return (
     <>
       <SEO
-        title="Privacy Policy - DABEL Solutions"
-        description="Learn how DABEL Solutions collects, uses, and protects your personal information when using our digital products and services."
+        title="Privacy Policy - dabel ai"
+        description="Learn how we collect, use, and protect your personal information."
       />
       
       <div className="min-h-screen bg-background">
-        <div className="container py-12 md:py-16">
-          <Link 
-            href="/" 
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
+        <div className="container py-12 max-w-4xl">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Home
           </Link>
 
-          <div className="max-w-3xl mx-auto">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <div className="prose prose-slate max-w-none">
+            <h1 className="font-serif text-4xl font-bold text-foreground mb-4">
               Privacy Policy
             </h1>
             
-            <div className="prose prose-lg max-w-none">
-              <div className="bg-card border border-border rounded-lg p-6 mb-8">
-                <p className="text-muted-foreground mb-0">
-                  Last updated: May 15, 2026
-                </p>
-              </div>
+            <p className="text-muted-foreground mb-8">
+              <strong>Effective Date:</strong> February 21, 2026
+            </p>
 
-              <section className="mb-10">
-                <h2 className="font-serif text-2xl font-bold text-foreground mb-4">
-                  1. Information We Collect
-                </h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  We collect information that you provide directly to us, including:
-                </p>
-                <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                  <li>Account information (name, email address, password)</li>
-                  <li>Payment information (processed securely through our payment partners)</li>
-                  <li>Communication preferences and support inquiries</li>
-                  <li>Usage data and analytics to improve our services</li>
-                </ul>
-              </section>
+            <section className="mb-8">
+              <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
+                1. Introduction
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                We respect your privacy and are committed to protecting your personal data. This Privacy Policy outlines how we collect, use, and safeguard your information when you access our services, including digital products.
+              </p>
+            </section>
 
-              <section className="mb-10">
-                <h2 className="font-serif text-2xl font-bold text-foreground mb-4">
-                  2. How We Use Your Information
-                </h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  We use the information we collect to:
-                </p>
-                <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                  <li>Provide, maintain, and improve our services</li>
-                  <li>Process your transactions and send transaction notifications</li>
-                  <li>Respond to your comments, questions, and customer service requests</li>
-                  <li>Send you technical notices, updates, security alerts, and support messages</li>
-                  <li>Communicate with you about products, services, and promotional offers</li>
-                  <li>Monitor and analyze trends, usage, and activities in connection with our services</li>
-                </ul>
-              </section>
+            <section className="mb-8">
+              <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
+                2. Information We Collect
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                <strong>Account & Contact Information:</strong> Email, username, payment details (processed via secure payment provider).
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                <strong>Usage Data:</strong> Interaction logs, IP addresses, support inquiries, and activity within our product.
+              </p>
+            </section>
 
-              <section className="mb-10">
-                <h2 className="font-serif text-2xl font-bold text-foreground mb-4">
-                  3. Information Sharing
-                </h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  We do not sell your personal information. We may share your information with third-party service providers who perform services on our behalf, such as payment processing, data analysis, and customer service. These providers are bound by confidentiality agreements.
-                </p>
-              </section>
+            <section className="mb-8">
+              <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
+                3. How We Use Your Information
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                <strong>Service Delivery:</strong> To authenticate users, grant access, process payments, and manage subscriptions.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                <strong>Customer Support:</strong> Address queries, bug reports, and handle refund requests (duplicate payments only).
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                <strong>Product Improvement:</strong> Understand usage patterns to refine our services and user experience.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                <strong>Communications:</strong> Send updates about service, policy changes, or announcements.
+              </p>
+            </section>
 
-              <section className="mb-10">
-                <h2 className="font-serif text-2xl font-bold text-foreground mb-4">
-                  4. Data Security
-                </h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet is 100% secure.
-                </p>
-              </section>
+            <section className="mb-8">
+              <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
+                4. Data Sharing
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                We do not sell or rent your personal data. We may share information with:
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                <strong>Service Providers:</strong> Payment processors, hosting services, analytics tools—and only for the purpose outlined.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                <strong>Legal Authorities:</strong> If required to respond to legal obligations or protect our rights.
+              </p>
+            </section>
 
-              <section className="mb-10">
-                <h2 className="font-serif text-2xl font-bold text-foreground mb-4">
-                  5. Cookies and Tracking
-                </h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  We use cookies and similar tracking technologies to collect information about your browsing activities. You can control cookies through your browser settings, but disabling cookies may limit your ability to use certain features of our services.
-                </p>
-              </section>
+            <section className="mb-8">
+              <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
+                5. Data Security
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                We implement standard security measures to protect your personal data. However, no system is completely secure—use our services at your own risk.
+              </p>
+            </section>
 
-              <section className="mb-10">
-                <h2 className="font-serif text-2xl font-bold text-foreground mb-4">
-                  6. Your Rights
-                </h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  You have the right to:
-                </p>
-                <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                  <li>Access and receive a copy of your personal information</li>
-                  <li>Correct or update inaccurate information</li>
-                  <li>Request deletion of your personal information</li>
-                  <li>Opt out of marketing communications</li>
-                  <li>Withdraw consent where we rely on consent to process your information</li>
-                </ul>
-              </section>
+            <section className="mb-8">
+              <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
+                6. Retention & Deletion
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                We retain your data only as necessary to provide services, comply with law, or resolve issues. You may request access, correction, or deletion of your data by contacting us. We will respond within a reasonable timeframe.
+              </p>
+            </section>
 
-              <section className="mb-10">
-                <h2 className="font-serif text-2xl font-bold text-foreground mb-4">
-                  7. Children's Privacy
-                </h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  Our services are not directed to children under 13. We do not knowingly collect personal information from children under 13. If you become aware that a child has provided us with personal information, please contact us.
-                </p>
-              </section>
+            <section className="mb-8">
+              <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
+                7. Your Rights
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Depending on your jurisdiction, you may have rights including: access to data, correction, deletion, data portability, and restriction of certain processing. Contact us for these requests.
+              </p>
+            </section>
 
-              <section className="mb-10">
-                <h2 className="font-serif text-2xl font-bold text-foreground mb-4">
-                  8. Changes to This Policy
-                </h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
-                </p>
-              </section>
+            <section className="mb-8">
+              <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
+                8. Policy Updates
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                We may update this policy over time. Any changes will be indicated via a revised Effective Date. Continued use of our services after updates implies your agreement.
+              </p>
+            </section>
 
-              <section className="mb-10">
-                <h2 className="font-serif text-2xl font-bold text-foreground mb-4">
-                  9. Contact Us
-                </h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  If you have questions about this Privacy Policy, please contact us at <a href="mailto:support@dabel.ai" className="text-accent hover:underline">support@dabel.ai</a>
-                </p>
-              </section>
-            </div>
+            <section className="mb-8">
+              <h2 className="font-serif text-2xl font-semibold text-foreground mb-4">
+                9. Contact
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                For privacy-related questions or requests, please reach out through our official support channels.
+              </p>
+            </section>
           </div>
         </div>
       </div>
