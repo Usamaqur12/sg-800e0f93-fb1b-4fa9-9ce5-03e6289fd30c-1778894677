@@ -1,6 +1,6 @@
 ---
 title: Design System Setup
-status: in_progress
+status: done
 priority: urgent
 type: chore
 tags: [foundation, styling]
@@ -16,7 +16,7 @@ Set up complete design system with custom palette, typography, and shadcn themin
 - [x] Create project brief with design direction
 - [x] Configure custom color tokens in globals.css
 - [x] Register fonts in tailwind.config.ts
-- [ ] Theme shadcn button and badge components
+- [x] Theme shadcn button and badge components
 
 ## Acceptance
 - Design system tokens render correctly across all components
