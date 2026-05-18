@@ -739,8 +739,8 @@ export default function Home() {
                 {/* Price & CTA */}
                 <div className="pt-6">
                   <div className="flex items-baseline gap-3 mb-6">
-                    <span className="text-4xl font-bold text-foreground">$99</span>
-                    <span className="text-muted-foreground">one-time payment</span>
+                    <span className="text-4xl font-bold text-foreground">$330</span>
+                    <span className="text-muted-foreground">per month</span>
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -748,7 +748,7 @@ export default function Home() {
                       size="lg"
                       variant="accent"
                       className="text-lg px-8 py-6 w-full sm:w-auto"
-                      onClick={() => window.open("https://whop.com/checkout/plan_hustler", "_blank")}
+                      onClick={() => window.open("https://whop.com/checkout/plan_MMYJ2qFLVCiZ3", "_blank")}
                     >
                       <Download className="w-5 h-5 mr-2" />
                       Get Instant Access
@@ -757,7 +757,7 @@ export default function Home() {
                       size="lg"
                       variant="outline"
                       className="text-lg px-8 py-6 w-full sm:w-auto border-accent/30 hover:bg-accent/10"
-                      onClick={() => window.open("https://whop.com/checkout/plan_hustler", "_blank")}
+                      onClick={() => window.open("https://whop.com/checkout/plan_MMYJ2qFLVCiZ3", "_blank")}
                     >
                       Download Bundle
                     </Button>
