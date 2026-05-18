@@ -613,6 +613,179 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* Digital Hustler Pack Product */}
+          <div className="max-w-6xl mx-auto mt-32">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Product Image */}
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-primary opacity-20 blur-3xl group-hover:opacity-30 transition-opacity duration-500" />
+                <div className="relative glass-effect rounded-2xl p-8 border border-border/50">
+                  <img
+                    src="/digital-hustler-pack.png"
+                    alt="Digital Hustler Pack"
+                    className="w-full h-auto rounded-xl shadow-2xl transform group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 left-4 bg-gradient-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                    Complete Bundle
+                  </div>
+                </div>
+              </div>
+
+              {/* Product Details */}
+              <div className="space-y-6">
+                <div className="inline-flex items-center gap-2 bg-gradient-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
+                  <Zap className="w-4 h-4" />
+                  ULTIMATE BUNDLE
+                </div>
+
+                <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground">
+                  Digital Hustler Pack
+                </h2>
+                <p className="text-xl text-accent font-semibold">
+                  Everything You Need to Create, Grow & Earn Online
+                </p>
+
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Everything you need for content creation, freelancing, social media growth, and online business in one powerful bundle.
+                </p>
+
+                {/* What's Inside */}
+                <div className="space-y-3 pt-4">
+                  <p className="font-semibold text-foreground text-lg">What's included:</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>1000+ ChatGPT Prompts for content, marketing & sales</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Seaggs Vector Mockup Pack</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>1000+ Elementor Pro Landing Page Templates</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>1000+ Gym Motivation Reels</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>500+ AI Tech Reels Bundle</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>2D Animation Funny Reels</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Sales Message Scripts & Templates</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>100,000+ Editable T-Shirt Designs</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Feature Grid */}
+                <div className="grid sm:grid-cols-2 gap-4 pt-4">
+                  <div className="flex items-start gap-3 p-4 rounded-lg glass-effect hover:bg-card/50 transition-colors">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <Award className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Premium Quality</p>
+                      <p className="text-sm text-muted-foreground">Professional files</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 rounded-lg glass-effect hover:bg-card/50 transition-colors">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <Users className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Beginner Friendly</p>
+                      <p className="text-sm text-muted-foreground">Easy to use</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 rounded-lg glass-effect hover:bg-card/50 transition-colors">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <Zap className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">Instant Access</p>
+                      <p className="text-sm text-muted-foreground">Download now</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 rounded-lg glass-effect hover:bg-card/50 transition-colors">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                      <Target className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground">For Hustlers</p>
+                      <p className="text-sm text-muted-foreground">Creators & freelancers</p>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-muted-foreground italic pt-4">
+                  🔥 The complete all-in-one bundle to create, grow & earn online faster.
+                </p>
+
+                {/* Price & CTA */}
+                <div className="pt-6">
+                  <div className="flex items-baseline gap-3 mb-6">
+                    <span className="text-4xl font-bold text-foreground">$99</span>
+                    <span className="text-muted-foreground">one-time payment</span>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button
+                      size="lg"
+                      variant="accent"
+                      className="text-lg px-8 py-6 w-full sm:w-auto"
+                      onClick={() => window.open("https://whop.com/checkout/plan_hustler", "_blank")}
+                    >
+                      <Download className="w-5 h-5 mr-2" />
+                      Get Instant Access
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="text-lg px-8 py-6 w-full sm:w-auto border-accent/30 hover:bg-accent/10"
+                      onClick={() => window.open("https://whop.com/checkout/plan_hustler", "_blank")}
+                    >
+                      Download Bundle
+                    </Button>
+                  </div>
+
+                  {/* Trust Badges */}
+                  <div className="flex flex-wrap gap-4 mt-6">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-2 h-2 rounded-full bg-green-500" />
+                      Instant Digital Delivery
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-2 h-2 rounded-full bg-green-500" />
+                      Lifetime Access
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-2 h-2 rounded-full bg-green-500" />
+                      Beginner Friendly
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-2 h-2 rounded-full bg-green-500" />
+                      Secure Checkout
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* About DABEL AI Section */}
