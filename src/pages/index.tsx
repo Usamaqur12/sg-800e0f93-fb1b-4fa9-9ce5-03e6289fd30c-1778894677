@@ -341,7 +341,7 @@ export default function Home() {
                 {/* Price & CTA */}
                 <div className="pt-6">
                   <div className="flex items-baseline gap-3 mb-6">
-                    <span className="text-4xl font-bold text-foreground">$250</span>
+                    <span className="text-4xl font-bold text-foreground">$280</span>
                     <span className="text-muted-foreground">one-time payment</span>
                   </div>
 
