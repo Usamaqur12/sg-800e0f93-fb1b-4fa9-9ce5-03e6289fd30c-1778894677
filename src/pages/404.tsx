@@ -23,7 +23,7 @@ export default function NotFound() {
             <p className="text-lg text-muted-foreground mb-6">
               Sorry, we couldn't find the page you requested. This page may have been moved, deleted, or never existed.
             </p>
-            <Button asChild variant="accent" size="lg">
+            <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90" size="lg">
               <Link href="/" className="inline-flex items-center gap-2">
                 <Home className="w-4 h-4" />
                 Return to home page
