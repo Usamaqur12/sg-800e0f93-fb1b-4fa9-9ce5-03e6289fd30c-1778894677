@@ -1,6 +1,6 @@
 import { SEO } from "@/components/SEO";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, CheckCircle2 } from "lucide-react";
 
 export default function RefundPolicy() {
   return (
@@ -101,11 +101,12 @@ export default function RefundPolicy() {
                 <li>Payment transaction details</li>
                 <li>Reason for refund request</li>
               </ul>
-              <div className="bg-accent/10 border-l-4 border-accent rounded-r-lg p-4 mt-6">
-                <p className="text-foreground font-medium">
-                  ✅ By purchasing and using our services, you agree to comply with this Refund Policy, along with our Server Rules and Terms of Service.
-                </p>
-              </div>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                <span>
+                  By purchasing and using our services, you agree to comply with this Refund Policy and our Terms of Service.
+                </span>
+              </li>
             </section>
           </div>
         </div>
