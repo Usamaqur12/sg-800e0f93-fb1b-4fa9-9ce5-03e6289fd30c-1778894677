@@ -1,28 +1,39 @@
 import React from 'react'
-import Head from 'next/head'
+import { SEO } from "@/components/SEO"
+import { Header } from "@/components/Header"
+import { Footer } from "@/components/Footer"
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
+import { Home } from "lucide-react"
 
 export default function NotFound() {
   return (
     <>
-      <Head>
-        <title>404 - Page Not Found</title>
-        <meta name="description" content="Page not found" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <SEO
+        title="404 - Page Not Found"
+        description="Page not found"
+      />
       
-      <main className="min-h-screen bg-gray-100 flex items-center justify-center">
-        <div className="text-center space-y-4">
-          <h1 className="text-4xl font-bold text-gray-900">404</h1>
-          <p className="text-lg text-gray-600">Sorry, we couldn't find the page you requested. This page may have been moved, deleted, or never existed.</p>
-          <Button asChild>
-            <Link href="/">
-              Return to home page
-            </Link>
-          </Button>
+      <Header />
+      
+      <main className="min-h-screen bg-background pt-24 flex items-center justify-center">
+        <div className="text-center space-y-6 px-4">
+          <div className="glass-effect rounded-2xl p-12 border border-border/50 max-w-md mx-auto">
+            <h1 className="font-serif text-6xl font-bold text-accent mb-4">404</h1>
+            <p className="text-lg text-muted-foreground mb-6">
+              Sorry, we couldn't find the page you requested. This page may have been moved, deleted, or never existed.
+            </p>
+            <Button asChild variant="accent" size="lg">
+              <Link href="/" className="inline-flex items-center gap-2">
+                <Home className="w-4 h-4" />
+                Return to home page
+              </Link>
+            </Button>
+          </div>
         </div>
       </main>
+
+      <Footer />
     </>
   )
 }
