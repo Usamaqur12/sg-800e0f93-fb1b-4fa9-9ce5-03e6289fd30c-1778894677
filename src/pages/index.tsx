@@ -1072,36 +1072,38 @@ export default function Home() {
 
                 {/* Legal Section */}
                 <div>
-                  <h4 className="font-semibold text-foreground mb-4 flex items-center gap-2">
-                    <FileText className="w-4 h-4 text-accent" />
-                    Legal
-                  </h4>
-                  <ul className="space-y-3">
+                  <h3 className="font-semibold text-foreground mb-4">Legal</h3>
+                  <ul className="space-y-2">
                     <li>
-                      <Link 
-                        href="/terms-of-service" 
-                        className="text-muted-foreground hover:text-accent transition-colors flex items-center gap-2 group"
+                      <Link
+                        href="/terms-of-service"
+                        className="text-muted-foreground hover:text-accent transition-colors"
                       >
-                        <ChevronRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                         Terms of Service
                       </Link>
                     </li>
                     <li>
-                      <Link 
-                        href="/privacy-policy" 
-                        className="text-muted-foreground hover:text-accent transition-colors flex items-center gap-2 group"
+                      <Link
+                        href="/privacy-policy"
+                        className="text-muted-foreground hover:text-accent transition-colors"
                       >
-                        <ChevronRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                         Privacy Policy
                       </Link>
                     </li>
                     <li>
-                      <Link 
-                        href="/refund-policy" 
-                        className="text-muted-foreground hover:text-accent transition-colors flex items-center gap-2 group"
+                      <Link
+                        href="/refund-policy"
+                        className="text-muted-foreground hover:text-accent transition-colors"
                       >
-                        <ChevronRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                         Refund Policy
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/eula"
+                        className="text-muted-foreground hover:text-accent transition-colors"
+                      >
+                        EULA
                       </Link>
                     </li>
                   </ul>
