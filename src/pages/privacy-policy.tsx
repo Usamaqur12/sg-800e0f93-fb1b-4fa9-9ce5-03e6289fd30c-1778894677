@@ -1,4 +1,6 @@
 import { SEO } from "@/components/SEO";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
@@ -10,7 +12,9 @@ export default function PrivacyPolicy() {
         description="Learn how we collect, use, and protect your personal information."
       />
       
-      <div className="min-h-screen bg-background">
+      <Header />
+
+      <div className="min-h-screen bg-background pt-24 pb-16">
         <div className="container py-12 max-w-4xl">
           <Link
             href="/"
@@ -130,6 +134,8 @@ export default function PrivacyPolicy() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 }

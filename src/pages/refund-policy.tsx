@@ -1,5 +1,6 @@
 import { SEO } from "@/components/SEO";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import Link from "next/link";
 import { ArrowLeft, FileText, CheckCircle2, XCircle, Clock, Mail } from "lucide-react";
 
@@ -201,36 +202,10 @@ export default function RefundPolicy() {
               </div>
             </div>
           </div>
-
-          {/* Footer Navigation */}
-          <div className="mt-12 pt-8 border-t border-border/50">
-            <p className="text-sm text-muted-foreground mb-4">Related Documents:</p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/terms-of-service"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-card/30 border border-border/50 text-muted-foreground hover:text-accent hover:border-accent/50 transition-colors"
-              >
-                <FileText className="w-4 h-4" />
-                Terms of Service
-              </Link>
-              <Link
-                href="/privacy-policy"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-card/30 border border-border/50 text-muted-foreground hover:text-accent hover:border-accent/50 transition-colors"
-              >
-                <FileText className="w-4 h-4" />
-                Privacy Policy
-              </Link>
-              <Link
-                href="/eula"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-card/30 border border-border/50 text-muted-foreground hover:text-accent hover:border-accent/50 transition-colors"
-              >
-                <FileText className="w-4 h-4" />
-                EULA
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 }
