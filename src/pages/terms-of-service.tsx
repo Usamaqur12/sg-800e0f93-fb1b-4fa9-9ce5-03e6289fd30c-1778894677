@@ -33,7 +33,7 @@ export default function TermsOfService() {
               Terms of Service
             </h1>
             <p className="text-muted-foreground text-lg">
-              Effective Date: <span className="text-accent font-semibold">February 20, 2026</span>
+              Effective Date: <span className="text-accent font-semibold">May 20, 2026</span>
             </p>
           </div>
 
