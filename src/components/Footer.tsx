@@ -1,74 +1,31 @@
 import Link from "next/link";
-import { Logo } from "./Logo";
-import { Shield, Zap } from "lucide-react";
+import { Shield, Zap, Clock, Mail } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-card/30 backdrop-blur-sm">
+    <footer className="bg-[#0F1419] border-t border-border/30">
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Brand */}
-          <div className="md:col-span-1">
-            <Logo />
-            <p className="text-muted-foreground mt-4 text-sm">
-              Premium digital products for creators, designers, and marketers.
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
+          {/* Brand Section */}
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <span className="font-semibold text-foreground text-lg">DABEL</span>
+              <span className="font-semibold text-accent text-lg">Solutions</span>
+              <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+            </div>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Premium AI creator assets, templates, and digital resources for creators, marketers, and businesses.
             </p>
           </div>
 
-          {/* Products */}
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Products</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/#products"
-                  className="text-muted-foreground hover:text-accent transition-colors"
-                >
-                  Canva Templates
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#products"
-                  className="text-muted-foreground hover:text-accent transition-colors"
-                >
-                  Creator Mega Pack
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/#about"
-                  className="text-muted-foreground hover:text-accent transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="mailto:support@dabel.ai"
-                  className="text-muted-foreground hover:text-accent transition-colors"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Legal */}
+          {/* Legal Section */}
           <div>
             <h3 className="font-semibold text-foreground mb-4">Legal</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               <li>
                 <Link
                   href="/terms-of-service"
-                  className="text-muted-foreground hover:text-accent transition-colors"
+                  className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                 >
                   Terms of Service
                 </Link>
@@ -76,7 +33,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/privacy-policy"
-                  className="text-muted-foreground hover:text-accent transition-colors"
+                  className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                 >
                   Privacy Policy
                 </Link>
@@ -84,7 +41,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/refund-policy"
-                  className="text-muted-foreground hover:text-accent transition-colors"
+                  className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                 >
                   Refund Policy
                 </Link>
@@ -92,17 +49,42 @@ export function Footer() {
               <li>
                 <Link
                   href="/eula"
-                  className="text-muted-foreground hover:text-accent transition-colors"
+                  className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                 >
                   EULA
                 </Link>
               </li>
             </ul>
           </div>
+
+          {/* Support Section */}
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <Mail className="w-4 h-4 text-accent" />
+              <h3 className="font-semibold text-foreground">Support</h3>
+            </div>
+            <div className="space-y-4">
+              <div>
+                <p className="text-sm text-muted-foreground mb-1">Email Support</p>
+                <a
+                  href="mailto:support@dabel.ai"
+                  className="text-foreground hover:text-accent transition-colors font-medium"
+                >
+                  support@dabel.ai
+                </a>
+              </div>
+              <div className="flex items-start gap-2 p-3 rounded-lg bg-card/30 border border-border/30">
+                <Clock className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                <p className="text-sm text-muted-foreground">
+                  We typically respond within <span className="text-foreground font-medium">24 hours</span>.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border">
+        <div className="pt-8 border-t border-border/30">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             {/* Copyright */}
             <p className="text-sm text-muted-foreground">
@@ -111,13 +93,13 @@ export function Footer() {
 
             {/* Trust Badges */}
             <div className="flex items-center gap-6">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Shield className="w-4 h-4 text-green-500" />
-                <span>Secure Payments</span>
+              <div className="flex items-center gap-2">
+                <Shield className="w-4 h-4 text-accent" />
+                <span className="text-sm text-muted-foreground">Secure Payments</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
                 <Zap className="w-4 h-4 text-accent" />
-                <span>Instant Delivery</span>
+                <span className="text-sm text-muted-foreground">Instant Delivery</span>
               </div>
             </div>
           </div>
