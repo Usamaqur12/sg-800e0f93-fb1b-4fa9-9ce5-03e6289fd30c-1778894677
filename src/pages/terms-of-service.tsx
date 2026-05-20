@@ -25,7 +25,7 @@ export default function TermsOfService() {
 
           {/* Header */}
           <div className="mb-12">
-            <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-flex items-center gap-2 bg-accent/10 px-4 py-2 rounded-full text-sm text-accent font-semibold mb-6">
               <FileText className="w-4 h-4" />
               Legal Document
             </div>
@@ -33,7 +33,7 @@ export default function TermsOfService() {
               Terms of Service
             </h1>
             <p className="text-muted-foreground text-lg">
-              Effective Date: February 21, 2026
+              Effective Date: <span className="text-accent font-semibold">February 20, 2026</span>
             </p>
           </div>
 
