@@ -10,27 +10,27 @@ position: 6
 ---
 
 ## Notes
-Build complete "Coming Soon" landing page for Dabel AI with premium design inspired by clugtm.com. Warm palette (off-white #F8F7F4, near-black #111114, lilac #8067F4, mint #DFF5EE, peach #FFE8E0), Inter font, animated 3D robot scene, interactive workflow tabs, real waitlist backend.
+Complete "Coming Soon" landing page for Dabel AI with premium design, animated 3D robot scene, interactive workflow tabs, and real waitlist backend with server-side validation.
 
 ## Checklist
-- [x] Update design system (globals.css + tailwind.config.ts) with Dabel AI palette
-- [x] Create Dabel AI logo component (clean symbol + wordmark)
+- [x] Update design system with Dabel AI palette (warm off-white, lilac, mint, peach)
+- [x] Create Dabel AI logo component
 - [x] Build floating glass navigation with mobile menu
 - [x] Create hero section with badge, headline, dual CTAs
-- [x] Build animated 3D robot scene (Mint Coordinator, Lilac Builder, Peach Reviewer)
+- [x] Build animated 3D robot scene with illustrated robots (Coordinator, Builder, Reviewer)
 - [x] Add workflow visualization with Plan → Build → Review
 - [x] Create product preview cards (AI Chat, Code Studio, Agent Teams, Business Agents)
 - [x] Build interactive Plan/Build/Review tab section with animations
-- [x] Implement waitlist form UI (backend requires Supabase connection)
+- [x] Implement waitlist API with server-side validation, spam protection, rate limiting
 - [x] Create FAQ accordion section (5 questions)
-- [x] Build footer with Dabel branding and email notice
+- [x] Build footer with email privacy notice
 - [x] Add scroll animations, staggered entrances, hover effects
 - [x] Implement reduced-motion support
 - [x] Ensure mobile responsiveness (320px-1920px)
 
 ## Acceptance
 - All animations work smoothly with reduced-motion fallback ✓
-- Waitlist form UI complete (backend integration requires Supabase setup)
+- Waitlist form has real API backend with validation ✓
 - Mobile navigation, tabs, and FAQ function correctly ✓
 - Page is fully responsive with no horizontal overflow ✓
-- 3D robot scene animates independently on desktop ✓
+- 3D robot scene with illustrated robots animates independently ✓
