@@ -48,11 +48,25 @@ export default function ComingSoon() {
     }
 
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setError("Waitlist backend not yet configured. Please check back soon.");
-      setLoading(false);
+      const response = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSuccess(true);
+        setEmail("");
+      } else {
+        setError(data.error || "Something went wrong. Please try again.");
+      }
     } catch (err) {
-      setError("Something went wrong. Please try again.");
+      setError("Network error. Please check your connection and try again.");
+    } finally {
       setLoading(false);
     }
   };
@@ -172,11 +186,14 @@ export default function ComingSoon() {
             <div className={`relative min-h-[600px] dabel-glass rounded-3xl p-8 md:p-12 overflow-hidden transition-all duration-700 ${
               sceneAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}>
+              {/* Background ambient elements */}
               <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className={`absolute top-20 right-10 w-64 h-64 bg-dabel-mint rounded-full blur-3xl opacity-30 ${getAnimationClass("animate-float")}`} />
                 <div className={`absolute bottom-20 left-10 w-64 h-64 bg-dabel-peach rounded-full blur-3xl opacity-30 ${getAnimationClass("animate-float-slow")}`} />
+                <div className={`absolute top-1/2 left-1/4 w-48 h-48 bg-dabel-lilac rounded-full blur-3xl opacity-20 ${getAnimationClass("animate-float")}`} />
               </div>
 
+              {/* Central workflow panel */}
               <div className="relative z-10 max-w-2xl mx-auto">
                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-dabel-black/10 p-8 transition-all hover:shadow-2xl">
                   <div className="flex items-center justify-between mb-8">
@@ -189,6 +206,7 @@ export default function ComingSoon() {
                   </div>
 
                   <div className="space-y-6">
+                    {/* Plan Step */}
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-xl bg-dabel-mint flex items-center justify-center flex-shrink-0 transition-transform hover:scale-110">
                         <svg className="w-6 h-6 text-dabel-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -207,6 +225,7 @@ export default function ComingSoon() {
                       <div className="text-xs text-dabel-black/40 font-mono">→</div>
                     </div>
 
+                    {/* Build Step */}
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-xl bg-dabel-lilac flex items-center justify-center flex-shrink-0 transition-transform hover:scale-110">
                         <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -227,6 +246,7 @@ export default function ComingSoon() {
                       <div className="text-xs text-dabel-black/40 font-mono">→</div>
                     </div>
 
+                    {/* Review Step */}
                     <div className="flex items-center gap-4 opacity-50">
                       <div className="w-12 h-12 rounded-xl bg-dabel-peach flex items-center justify-center flex-shrink-0 transition-transform hover:scale-110">
                         <svg className="w-6 h-6 text-dabel-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -242,25 +262,94 @@ export default function ComingSoon() {
                   </div>
                 </div>
 
-                <div className="absolute -left-8 top-1/4 transform -translate-y-1/2 hidden lg:block">
-                  <div className={`w-20 h-20 rounded-2xl bg-dabel-mint shadow-lg flex items-center justify-center ${getAnimationClass("animate-float")} border-2 border-white transition-transform hover:scale-110`}>
-                    <span className="text-2xl">📋</span>
+                {/* Mint Coordinator Robot - Left */}
+                <div className="absolute -left-12 top-1/4 transform -translate-y-1/2 hidden lg:block">
+                  <div className={`${getAnimationClass("animate-float")} transition-transform hover:scale-110`}>
+                    {/* Robot body */}
+                    <div className="relative w-24 h-32">
+                      {/* Head */}
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-16 rounded-2xl bg-gradient-to-br from-dabel-mint to-emerald-200 shadow-lg border-2 border-white flex items-center justify-center">
+                        {/* Eyes */}
+                        <div className="flex gap-2">
+                          <div className="w-2 h-2 rounded-full bg-dabel-black" />
+                          <div className="w-2 h-2 rounded-full bg-dabel-black" />
+                        </div>
+                        {/* Antenna */}
+                        <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-1 h-3 bg-dabel-black rounded-full" />
+                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-dabel-mint border-2 border-dabel-black" />
+                      </div>
+                      {/* Body */}
+                      <div className="absolute top-14 left-1/2 -translate-x-1/2 w-20 h-16 rounded-xl bg-gradient-to-br from-dabel-mint to-emerald-200 shadow-lg border-2 border-white">
+                        {/* Planning board icon */}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <svg className="w-8 h-8 text-dabel-black/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="text-xs font-semibold text-center mt-2 text-dabel-black">Coordinator</div>
                   </div>
-                  <div className="text-xs font-medium text-center mt-2 text-dabel-black">Coordinator</div>
                 </div>
 
-                <div className="absolute -right-8 top-1/2 transform -translate-y-1/2 hidden lg:block">
-                  <div className={`w-20 h-20 rounded-2xl bg-dabel-lilac shadow-lg flex items-center justify-center ${getAnimationClass("animate-float-slow")} border-2 border-white transition-transform hover:scale-110`}>
-                    <span className="text-2xl">💻</span>
+                {/* Lilac Builder Robot - Right */}
+                <div className="absolute -right-12 top-1/2 transform -translate-y-1/2 hidden lg:block">
+                  <div className={`${getAnimationClass("animate-float-slow")} transition-transform hover:scale-110`}>
+                    {/* Robot body */}
+                    <div className="relative w-24 h-32">
+                      {/* Head */}
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-16 rounded-2xl bg-gradient-to-br from-dabel-lilac to-purple-400 shadow-lg border-2 border-white flex items-center justify-center">
+                        {/* Eyes with glow */}
+                        <div className="flex gap-2">
+                          <div className="w-2 h-2 rounded-full bg-white" />
+                          <div className="w-2 h-2 rounded-full bg-white" />
+                        </div>
+                        {/* Antenna */}
+                        <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-1 h-3 bg-white/80 rounded-full" />
+                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-dabel-lilac border-2 border-white" />
+                      </div>
+                      {/* Body */}
+                      <div className="absolute top-14 left-1/2 -translate-x-1/2 w-20 h-16 rounded-xl bg-gradient-to-br from-dabel-lilac to-purple-400 shadow-lg border-2 border-white">
+                        {/* Laptop icon */}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <svg className="w-8 h-8 text-white/90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="text-xs font-semibold text-center mt-2 text-dabel-black">Builder</div>
                   </div>
-                  <div className="text-xs font-medium text-center mt-2 text-dabel-black">Builder</div>
                 </div>
 
-                <div className="absolute -right-4 bottom-8 hidden lg:block">
-                  <div className={`w-20 h-20 rounded-2xl bg-dabel-peach shadow-lg flex items-center justify-center ${getAnimationClass("animate-float")} border-2 border-white transition-transform hover:scale-110`}>
-                    <span className="text-2xl">✓</span>
+                {/* Peach Reviewer Robot - Bottom Right */}
+                <div className="absolute -right-6 bottom-4 hidden lg:block">
+                  <div className={`${getAnimationClass("animate-float")} transition-transform hover:scale-110`} style={{ animationDelay: "1s" }}>
+                    {/* Robot body */}
+                    <div className="relative w-24 h-32">
+                      {/* Head */}
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-16 rounded-2xl bg-gradient-to-br from-dabel-peach to-orange-200 shadow-lg border-2 border-white flex items-center justify-center">
+                        {/* Eyes */}
+                        <div className="flex gap-2">
+                          <div className="w-2 h-2 rounded-full bg-dabel-black" />
+                          <div className="w-2 h-2 rounded-full bg-dabel-black" />
+                        </div>
+                        {/* Antenna */}
+                        <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-1 h-3 bg-dabel-black rounded-full" />
+                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-dabel-peach border-2 border-dabel-black" />
+                      </div>
+                      {/* Body */}
+                      <div className="absolute top-14 left-1/2 -translate-x-1/2 w-20 h-16 rounded-xl bg-gradient-to-br from-dabel-peach to-orange-200 shadow-lg border-2 border-white">
+                        {/* Review checkmark icon */}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <svg className="w-8 h-8 text-dabel-black/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="text-xs font-semibold text-center mt-2 text-dabel-black">Reviewer</div>
                   </div>
-                  <div className="text-xs font-medium text-center mt-2 text-dabel-black">Reviewer</div>
                 </div>
               </div>
             </div>
