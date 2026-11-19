@@ -13,20 +13,20 @@ position: 6
 Build complete "Coming Soon" landing page for Dabel AI with premium design inspired by clugtm.com. Warm palette (off-white #F8F7F4, near-black #111114, lilac #8067F4, mint #DFF5EE, peach #FFE8E0), Inter font, animated 3D robot scene, interactive workflow tabs, real waitlist backend.
 
 ## Checklist
-- [ ] Update design system (globals.css + tailwind.config.ts) with Dabel AI palette
-- [ ] Create Dabel AI logo component (clean symbol + wordmark)
-- [ ] Build floating glass navigation with mobile menu
-- [ ] Create hero section with badge, headline, dual CTAs
-- [ ] Build animated 3D robot scene (Mint Coordinator, Lilac Builder, Peach Reviewer)
-- [ ] Add workflow visualization with Plan → Build → Review
-- [ ] Create product preview cards (AI Chat, Code Studio, Agent Teams, Business Agents)
-- [ ] Build interactive Plan/Build/Review tab section with animations
+- [x] Update design system (globals.css + tailwind.config.ts) with Dabel AI palette
+- [x] Create Dabel AI logo component (clean symbol + wordmark)
+- [x] Build floating glass navigation with mobile menu
+- [x] Create hero section with badge, headline, dual CTAs
+- [x] Build animated 3D robot scene (Mint Coordinator, Lilac Builder, Peach Reviewer)
+- [x] Add workflow visualization with Plan → Build → Review
+- [x] Create product preview cards (AI Chat, Code Studio, Agent Teams, Business Agents)
+- [x] Build interactive Plan/Build/Review tab section with animations
 - [ ] Implement waitlist form with Supabase backend integration
-- [ ] Create FAQ accordion section (5 questions)
-- [ ] Build footer with Dabel branding and email notice
-- [ ] Add scroll animations, staggered entrances, hover effects
-- [ ] Implement reduced-motion support
-- [ ] Ensure mobile responsiveness (320px-1920px)
+- [x] Create FAQ accordion section (5 questions)
+- [x] Build footer with Dabel branding and email notice
+- [x] Add scroll animations, staggered entrances, hover effects
+- [x] Implement reduced-motion support
+- [x] Ensure mobile responsiveness (320px-1920px)
 
 ## Acceptance
 - All animations work smoothly with reduced-motion fallback
